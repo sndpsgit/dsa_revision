@@ -80,28 +80,3 @@ public class rough {
     }
 }
 
-
-
-
-
-Learned Till OOPs - implementing own ArrayListS & enhancing it
-
-Conceps Covered (till now) :
-        - basics
-    - searching_sorting
-    - recursion
-    - subset-permut-combin
-
-    - OOPs revised (just read)
-    - Revised core OOP conceps
-    - Started applying OOPs concept by designing ArrayList implementation
-
-Current Focus :
-        - Looking to implement ITERABLE in ArrayList
-    - then implement List in ArrayList
-    - Understand the behaviour of interfaces and implementation and what it makes easy
-Ex. like why List interface designed--> its connection with sorting methods and more. like when we pass it take as rAw List ??
-
-Next Focus :
-        - implement own LinkedListS
-    - LinkedList DSA questions

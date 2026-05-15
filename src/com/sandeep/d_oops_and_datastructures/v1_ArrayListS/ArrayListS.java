@@ -1,8 +1,9 @@
-package com.sandeep.d_oops_and_datastructures;
+package com.sandeep.d_oops_and_datastructures.v1_ArrayListS;
 
-import java.beans.ConstructorProperties;
 
-public class ArrayListS <T> {
+import java.util.Iterator;
+
+public class ArrayListS <T> implements Iterable <T>{
     private final int def_size ;
     private Object[] arr; //Initialize arr in constructor (best practice)
     private int size = 0;
@@ -89,10 +90,38 @@ public class ArrayListS <T> {
     public ArrayListS (ArrayListS<? extends T> list){
         this(list.size);
 
-        for(int i = 0; i < list.size(); i++){ // here also i want help
+        /*for(int i = 0; i < list.size(); i++){ // here also i want help
             this.add(list.get(i)); //here i want help
-        }
+        }*/
         //here I can use for-each look---> for that I have to make these "ArrayListS"==>Iterable
+
+        for (T e : list){
+            this.add(e);
+        }
     }
+
+    //Feature- Iteration
+
+    @Override
+    public Iterator<T> iterator() {
+        return new ArrayListSIterator();
+    }
+
+    private class ArrayListSIterator implements Iterator <T>{
+        private int cursor = 0;
+
+        @Override
+        public boolean hasNext() {
+            return cursor < size;
+        }
+        @Override
+        public T next() {
+            if (hasNext()) return (T) arr[cursor++];
+            else return null;
+        }
+    }
+
+
+
 
 }
