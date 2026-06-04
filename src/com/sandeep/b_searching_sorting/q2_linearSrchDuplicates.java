@@ -1,6 +1,6 @@
 package com.sandeep.b_searching_sorting;
 /*  User Enters Array (Simple Linear & duplicates possible) & target
-*   Find indexes of target */
+*   Find indexes of target - return Array*/
 
 import java.util.*;
 import com.sandeep.a0_lib.dsaLib;
